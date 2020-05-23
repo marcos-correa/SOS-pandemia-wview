@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         // Habilitando usar JavaScript dentro  do app e setando o WebViewClient
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
+
+        //Resolvendo o problema da primeira página em branco.
+        WebSettings settings = webView.getSettings();
+        settings.setDomStorageEnabled(true);
+
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
