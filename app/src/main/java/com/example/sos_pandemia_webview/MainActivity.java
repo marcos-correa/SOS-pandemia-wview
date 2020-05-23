@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         WebView webView = findViewById(R.id.webview);
-        webView.loadUrl("https://sospandemia.org/auth/register");
+        webView.loadUrl("https://sospandemia.org/");
 
         // Habilitando usar JavaScript dentro  do app e setando o WebViewClient
         webView.getSettings().setJavaScriptEnabled(true);
