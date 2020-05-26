@@ -1,13 +1,11 @@
 package com.example.sos_pandemia_webview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,15 +16,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView webView = findViewById(R.id.webview);
-        webView.loadUrl("https://sospandemia.org/");
+        //acessando a url
+        WebView wv = findViewById(R.id.webview);
+        wv.loadUrl("https://sospandemia.org/");
 
         // Habilitando usar JavaScript dentro  do app e setando o WebViewClient
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.setWebViewClient(new WebViewClient());
 
         //Resolvendo o problema da primeira página em branco.
-        WebSettings settings = webView.getSettings();
+        WebSettings settings = wv.getSettings();
         settings.setDomStorageEnabled(true);
 
     }
