@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         WebView wv = findViewById(R.id.webview);
-        wv.loadUrl("https://sospandemia.org/"); //Acesso URL
+        wv.loadUrl("https://sospandemia.org/"); //Acesso URL AQUI
         wv.setWebViewClient(new WebViewClient()); //Novo WebViewClient
         wv.getSettings().setJavaScriptEnabled(true); //Habilitando Javascript
         wv.getSettings().setDomStorageEnabled(true); //Resolvendo o problema da primeira página em branco.
